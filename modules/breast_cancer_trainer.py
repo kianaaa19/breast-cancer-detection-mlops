@@ -1,5 +1,5 @@
 """
-spam_trainer.py
+breast_cancer_trainer.py
 """
 import os
 import tensorflow as tf
