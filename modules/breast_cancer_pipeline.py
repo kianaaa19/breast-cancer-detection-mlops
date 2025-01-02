@@ -1,5 +1,5 @@
 """
-spam_pipeline.py
+breast_cancer_pipeline.py
 """
 from typing import Text
 
