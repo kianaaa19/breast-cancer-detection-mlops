@@ -1,17 +1,14 @@
-# Submission Proyek Akhir: Spam Email Classification
-Nama: Santanam Wishal
+# Breast Cancer Detection MLOps
 
-Username dicoding: kianaa19
-
-| | Deskripsi |
+| | Description |
 | ----------- | ----------- |
-| Dataset | [Spam email classification](https://www.kaggle.com/datasets/ashfakyeafi/spam-email-classification) |
-| Masalah | Spam merupakan salah satu hal yang menganggu kenyamanan user dalam menggunakan email. |
-| Solusi machine learning | Machine Learning Natural Language Processing dapat mendeteksi Spam pada email. |
-| Metode pengolahan | Metode pengolahan data yang digunakan pada proyek ini berupa tokenisasi fitur input (text dari email) yang awalnya berupa text diubah menjadi susunan angka yang merepresentasikan text tersebut agar dapat dengan mudah dimengerti oleh model (Text Vectorization)|
-| Arsitektur model | Model yang dibangun menggunakan layer TextVectorization sebagai layer yang akan memproses input string kedalam bentuk susunan angka, kemudian layer Embedding yang bertugas untuk mempelajari kedekatan atau kemiripan dari sebuah kata yang berguna untuk mengetahui apakah kata tersebut merupakan kata negatif atau kata positif. Lalu terdapat 2 hidden layer dan 1 output layer |
-| Metrik evaluasi | Metrik yang digunakan pada model yaitu Binary Accuracy, True Positive, False Positive, True Negative, False Negative untuk mengevaluasi performa model dalam menentukan klasifikasi |
-| Performa model | Model yang dibuat menghasilkan performa yang cukup baik dalam memberikan prediksi untuk text berita yang diinputkan, dan dari pelatihan yang dilakukan model menghasilkan binary_accuracy lebih dari 98% |
-| Opsi deployment | Model dideploy di Cloudeka dengan menggunakan layanan DekaFlexi |
-| Web app | [spam_ml](https://kianaa19-spam-detection-ml.w3spaces.com)  |
-| Monitoring | Monitoring pada sistem ini dilakukan menggunakan prometheus dan grafana. Disini hanya dilakukan proses monitoring untuk menampilkan request yang masuk pada sistem yang akan menamplkan status pada tiap request yang dilakukan, pada sistem ini terdapat tiga status yang ditampilkan yaitu apabila proses request pada sistem klasifikasi not found, invalid argument dan proses klasifikasi berhasil ditandakan dengan ok |
+| **Dataset** | The dataset contains radiological numerical features of breast cancer patients, such as radius, texture, perimeter, and more. Dataset: [Wisconsin Diagnostic Breast Cancer (WDBC)](https://www.kaggle.com/datasets/uciml/breast-cancer-wisconsin-data). |
+| **Problem** | Early detection of breast cancer is crucial for improving patient recovery rates. Machine learning-based classification can assist in diagnosing cancer more quickly and accurately. |
+| **Machine Learning Solution** | A **classification model** that predicts whether the data belongs to the **Malignant (cancer)** or **Benign (non-cancer)** category using numerical features. |
+| **Data Processing Methods** | The data is preprocessed using: ** - Normalization of numerical features to bring them to the same scale. ** - Splitting the dataset into training, validation, and testing sets. |
+| **Model Architecture** | The model is built using a **Dense Neural Network (DNN)**: ** - **Input Layer**: Numerical features such as `radius_mean`, `texture_mean`, `perimeter_mean`, etc. ** - **Hidden Layers**: 2-3 dense layers with ReLU activation. ** - **Output Layer**: Sigmoid activation for binary classification. |
+| **Evaluation Metrics** | The model is evaluated using **Binary Accuracy**, **Precision**, **Recall**, and **F1-Score**. |
+| **Model Performance** | The model achieves an accuracy of **95% or higher** on the test data, with a good balance between Precision and Recall. |
+| **Deployment Option** | The model can be deployed on cloud platforms such as **AWS SageMaker**, exposing an API endpoint for integration with clinical applications. |
+| **Web App** | A simple web application allows users to upload patient data and receive predictions. |
+| **Monitoring** | Monitoring is implemented using **Prometheus** and **Grafana** to track the number of predictions, response times, and request statuses (successful/failed). |
