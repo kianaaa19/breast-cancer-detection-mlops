@@ -113,7 +113,7 @@ DOCKER = "Dockerfile"
 # In[14]:
 
 
-get_ipython().run_cell_magic('writefile', '{DOCKER}', 'FROM tensorflow/serving:latest\n\nCOPY ./serving_model_dir /models\nENV MODEL_NAME=breast_cancer-detection-model\n')
+get_ipython().run_cell_magic('writefile', '{DOCKER}', 'FROM tensorflow/serving:latest\n\nCOPY ./serving_model_dir /models\nENV MODEL_NAME=breast-cancer-detection-model\n')
 
 
 # # WRITE FILE: REQUIREMENTS
@@ -190,7 +190,7 @@ metadata_path = os.path.join(pipeline_root, 'metadata.sqlite')
 # In[ ]:
 
 
-from modules.breast_cancer_pipeline1 import init_pipeline
+from modules.breast_cancer_pipeline import init_pipeline
 from modules.breast_cancer_components import init_components
 
 components = init_components(
