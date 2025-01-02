@@ -1,5 +1,5 @@
 """
-spam_components.py
+breast_cancer_components.py
 """
 import os
 
